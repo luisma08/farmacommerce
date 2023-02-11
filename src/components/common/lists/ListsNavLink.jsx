@@ -42,15 +42,6 @@ const ListsNavLink = ({ className = '', handleClickList = () => { }, handleClick
           Nosotros
         </NavLink>
       </li>
-      <li>
-        <NavLink
-          to="/contacto"
-          className={({ isActive }) => isActive ? "list__link list__link--active" : "list__link"}
-          onClick={handleClickNavLink}
-        >
-          Contacto
-        </NavLink>
-      </li>
     </ul>
   );
 };

@@ -41,7 +41,7 @@ const ProductsGallery = ({ products }) => {
                     rel="noopener noreferrer"
                     className="button button--primary"
                   >
-                    Cotizar
+                    Comprar por whatsapp
                   </a>
                 </div>
               </li>

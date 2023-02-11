@@ -20,7 +20,7 @@ const ProductsPage = () => {
   return (
     <ProductsWrapper
       loading={loading}
-      title="Producto"
+      title="Productos"
     >
       <ProductsGallery products={products} />
     </ProductsWrapper>

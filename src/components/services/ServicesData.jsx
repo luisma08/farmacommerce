@@ -11,8 +11,8 @@ const Services = ({ servicesData }) => {
                                 <img width="48" height="48" src={image.data.attributes.url} alt=""
                                 style={{backgroundColor:"white", padding: 30, borderRadius:20}} 
                                 />
-                                <h3 className="card__title card__title--lg color-dark-primary">{title}</h3>
-                                <p className="card__title color-dark-primary">{description}</p>
+                                <h3 className="card__title card__title--lg">{title}</h3>
+                                <p className="card__title card__title--sm">{description}</p>
                             </div>
                         </div>
                     )

@@ -23,7 +23,7 @@ export const fetchReadBestSellersProducts = createAsyncThunk(
     try {
       const options = {
         method: 'GET',
-        url: `/productos?filters[posicion][slug][$eq]=mas-vendidos&populate=marca,imagen`
+        url: `/products?pagination[page]=1&pagination[pageSize]=10&populate=image&sort=id%3Adesc`
       };
       const { data } = await axiosInstance(options);
       return data.data ?? [];

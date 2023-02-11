@@ -1,0 +1,14 @@
+.table {
+  border: 0.125rem solid var(--primary-highlight-color);
+  border-collapse: collapse;
+
+  tr {
+    &:nth-child(2n) {
+      background-color: var(--secondary-theme-color);
+    }
+  }
+
+  td {
+    padding: calc(var(--section-padding) * 0.25);
+  }
+}

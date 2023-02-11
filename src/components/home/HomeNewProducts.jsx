@@ -5,9 +5,10 @@ import { peruvianCurrencyFormat } from '../../utils/utils';
 import ContainersImage from '../common/containers/ContainersImage';
 
 const HomeNewProducts = ({ bestSellersProducts }) => {
+    
   return (
     <div className='container'>
-        <div className='container py-2'>
+        <div className='py-2'>
             <h2 className='section__title section__title--lg'>Nuevos productos</h2>
         </div>
         <Swiper
@@ -18,9 +19,25 @@ const HomeNewProducts = ({ bestSellersProducts }) => {
         speed={500}
         autoplay={{ delay: 5000 }}
         loop={true}
-        slidesPerView={4}
         pagination={{ clickable: true }}
         preloadImages={false}
+        breakpoints={{
+            // when window width is >= 640px
+            640: {
+              width: 640,
+              slidesPerView: 1,
+            },
+            // when window width is >= 768px
+            768: {
+              width: 768,
+              slidesPerView: 2,
+            },
+            1024: {
+                width: 1024,
+                slidesPerView: 4,
+              },
+          }}
+        spaceBetween={30}
         >
         {bestSellersProducts.map((element) => {
             const { title, slug, image, price } = element.attributes;
@@ -28,24 +45,27 @@ const HomeNewProducts = ({ bestSellersProducts }) => {
             <SwiperSlide
                 key={element.id}
                 tag='section'
-                className='hero d-flex a-items-center'
+                className='card card--products'
             >
-                <div className="container container--5xl w-100">
-                <div className="card card--hero">
-                    <div className="d-flex f-direction-column f-elements--center gap-xs t-align-center">
-                        <Link to={`/productos/${slug}`}>
-                            <ContainersImage
-                                src={image.data[0].attributes.formats.thumbnail.url}
-                                alt={title}
-                                className="card__header-img card__header-img--products border-radius-sm"
-                            />
-                        </Link>
-                        <h2 className="card__title card__title color-dark-primary">{title}</h2>
-                        <h3 className="card__title card__title--sm color-dark-primary">Farmalab</h3>
-                        <h3 className="card__highlighted card__highlighted--xl">{peruvianCurrencyFormat(price)}</h3>
-                        <Link to={`/productos/${slug}`} className="button button--primary">Ver más</Link>
-                    </div>
-                </div>
+                <Link to={`/productos/${slug}`}>
+                  <ContainersImage
+                    src={image.data[0].attributes.formats.thumbnail.url}
+                    alt={title}
+                    className="card__header-img card__header-img--products"
+                  />
+                </Link>
+                <div className="card__body card__body--products">
+                  <h3 className="card__subtitle card__subtitle--sm">Farmalab</h3>
+                  <Link to={`/productos/${slug}`} className="card__title">{title}</Link>
+                  <h4 className="card__highlighted mt-auto">{peruvianCurrencyFormat(price)}</h4>
+                  <a
+                    href={`https://api.whatsapp.com/send?phone=51949495862&text=Deseo comprar el producto ${title}, marca: farmalab`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="button button--primary"
+                  >
+                    Comprar
+                  </a>
                 </div>
             </SwiperSlide>
             );

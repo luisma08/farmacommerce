@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { peruvianCurrencyFormat } from '../../utils/utils';
 import ContainersImage from '../common/containers/ContainersImage';
 
-const HomeCategories = ({ bestSellersProducts }) => {
+const HomeNewProducts = ({ bestSellersProducts }) => {
   return (
     <div className='container'>
         <div className='container t-align-center'>
@@ -55,4 +55,4 @@ const HomeCategories = ({ bestSellersProducts }) => {
   );
 };
 
-export default HomeCategories;
+export default HomeNewProducts;

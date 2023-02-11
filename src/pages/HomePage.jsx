@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import LoadersModal from "../components/common/loaders/LoadersModal";
-import HomeCategories from "../components/home/HomeCategories";
+import HomeNewProducts from "../components/home/HomeNewProducts";
 //import ContactMeans from "../components/contact/ContactMeans";
 import HomeHero from "../components/home/HomeHero";
 import useHome from "../hooks/useHome";
@@ -20,7 +20,7 @@ const HomePage = () => {
     <>
       {loading && <LoadersModal />}
       <HomeHero heroProducts={heroProducts} />
-      <HomeCategories bestSellersProducts={bestSellersProducts}/>
+      <HomeNewProducts bestSellersProducts={bestSellersProducts}/>
     </>
   );
 };

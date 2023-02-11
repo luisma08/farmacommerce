@@ -7,13 +7,13 @@ const ContactHero = ({ contactData }) => {
   return (
     <>
       <HeroBanner
-        image={attributes?.hero.banner.data.attributes.formats.large.url}
-        title={attributes?.hero.titulo}
+        image={attributes?.image.data.attributes.url}
+        title={attributes?.title}
       />
       <HeroInformation
         subtitle={attributes?.hero.subtitulo}
         text={attributes?.hero.descripcion}
-        image={attributes?.imagen.data[0].attributes.url}
+        image={attributes?.image.data.attributes.url}
       />
     </>
   );

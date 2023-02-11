@@ -7,8 +7,8 @@ import ContainersImage from '../common/containers/ContainersImage';
 const HomeNewProducts = ({ bestSellersProducts }) => {
   return (
     <div className='container'>
-        <div className='container t-align-center'>
-            <h2>Nuevos productos</h2>
+        <div className='container py-2'>
+            <h2 className='section__title section__title--lg'>Nuevos productos</h2>
         </div>
         <Swiper
         tag='section'
@@ -37,7 +37,7 @@ const HomeNewProducts = ({ bestSellersProducts }) => {
                             <ContainersImage
                                 src={image.data[0].attributes.formats.thumbnail.url}
                                 alt={title}
-                                className="card__header-img card__header-img--products"
+                                className="card__header-img card__header-img--products border-radius-sm"
                             />
                         </Link>
                         <h2 className="card__title card__title color-dark-primary">{title}</h2>

@@ -11,6 +11,8 @@ const HomeHero = ({ heroProducts }) => {
       className='min-h-500'
       modules={[A11y, Autoplay, Pagination]}
       loop
+      speed={500}
+      autoplay={{ delay: 5000 }}
       pagination={{ clickable: true }}
       preloadImages={false}
     >

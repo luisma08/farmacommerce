@@ -55,20 +55,9 @@ const ContactMeans = () => {
           </ul>
         </div>
         <div className="d-flex f-direction-column gap-sm">
-          <h3 className="section__title section__title--sm">Contactanos</h3>
-          <p className="section__text">Nos comunicaremos contigo a la brevedad</p>
-          <form className="d-flex f-direction-column gap-xs">
-            <div className="g-elements g-elements--responsive-2 gap-xs">
-              <input type="text" name="name" placeholder="Nombre" className="input" required />
-              <input type="email" name="email" placeholder="Correo" className="input" required />
-            </div>
-            <div className="g-elements g-elements--responsive-2 gap-xs">
-              <input type="tel" name="phone" placeholder="Celular" className="input" required />
-              <input type="text" name="subject" placeholder="Asunto" className="input" required />
-            </div>
-            <textarea name="message" placeholder="Mensaje" className="input" required></textarea>
-            <button className="button-lg button button--primary">Contactar</button>
-          </form>
+          <h3 className="section__title section__title--sm">Ubicación</h3>
+          <p className="section__text">Nos puedes encontrar en</p>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3902.5477587017126!2d-77.01735378474388!3d-12.005763144408988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105cf7cb09fabf5%3A0xc951c1a12a22ebf3!2sJr.%20las%20Marticarias%20754%2C%20Lima%2015404!5e0!3m2!1ses-419!2spe!4v1676115498440!5m2!1ses-419!2spe" width="450" height="250" style={{borderRadius:10}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
     </section>

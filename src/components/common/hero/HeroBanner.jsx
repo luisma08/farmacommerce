@@ -3,7 +3,7 @@ import logoEAKON from '../../../assets/img/logo-eakon.webp';
 const HeroBanner = ({ image, title }) => {
   return (
     <section
-      className="hero d-flex a-items-center min-h-25vh"
+      className="hero d-flex a-items-center min-h-40vh"
       style={{
         backgroundImage: `url(${image ? image : logoEAKON})`
       }}

@@ -33,7 +33,7 @@ const ProductsGallery = ({ products }) => {
                 </Link>
                 <div className="card__body card__body--products">
                   <h3 className="card__subtitle card__subtitle--sm">Farmalab</h3>
-                  <Link to={`/productos/${slug}`} className="card__title card__title--sm">{title}</Link>
+                  <Link to={`/productos/${slug}`} className="card__title">{title}</Link>
                   <h4 className="card__highlighted mt-auto">{peruvianCurrencyFormat(price)}</h4>
                   <a
                     href={`https://api.whatsapp.com/send?phone=51949495862&text=Deseo comprar el producto ${title}, marca: farmalab`}

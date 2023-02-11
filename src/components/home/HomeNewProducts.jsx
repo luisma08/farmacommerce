@@ -32,7 +32,7 @@ const HomeNewProducts = ({ bestSellersProducts }) => {
             >
                 <div className="container container--5xl w-100">
                 <div className="card card--hero">
-                    <div className="card__body card__body--hero">
+                    <div className="d-flex f-direction-column f-elements--center gap-xs t-align-center">
                         <Link to={`/productos/${slug}`}>
                             <ContainersImage
                                 src={image.data[0].attributes.formats.thumbnail.url}
